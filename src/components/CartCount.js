@@ -13,7 +13,7 @@ const CartCount = (props) => {
             const currentUserCartItems = props.cart.filter(item => item.userId === props.userId) 
             if(currentUserCartItems.length) {
                 const itemsInCart = currentUserCartItems.map(item => item.count).reduce((prev, next) => prev + next);
-                return <p style={{display: 'inline', backgroundColor: '#00ffcb'}}> {itemsInCart} </p>
+                return <p className='cartCounter'> {itemsInCart} </p>
             }
             return 0
         }     

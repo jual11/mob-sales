@@ -9,6 +9,7 @@ import PlaceOrder from './PlaceOrder'
 import history from '../history'
 import Orders from './Orders'
 import SignIn from './SignIn'
+import Footer from './Footer'
 
 class App extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class App extends React.Component {
                         <Route exact path={'/myorders'} component={Orders}/>
                         <Route exact path={'/signin'} component={SignIn}/>
                     </Switch>
+                    <Footer />
                 </React.Fragment>
             </Router>
     );
