@@ -9,7 +9,7 @@ const ShoppingCart = (props) => {
 
     useEffect(() => {
         props.fetchItemsInCart()
-    },[change])
+    }, [change])
 
     const increace = (phone) => {
         props.increaceItemCount(phone, props.cart)

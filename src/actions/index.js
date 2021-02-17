@@ -49,15 +49,13 @@ export const addItemToCart = (phone, cart, userId) =>  async dispatch => {
         let newCount = filterCart[0].count
         newCount++
         
-
         const responce = await phones.patch(`/cart/${phoneId}`, {count: newCount})
         dispatch({ type: 'ADD_ITEM_TO_CART', payload: responce.data })
     }
     // If not then adds on with count 1
     if(!isInCart) {
-        //const nr2 = '113522037285322671555-101'
         const responce = await phones.post(`/cart`, {...phone, count:1, userId, id: phoneId})
-        //console.log(responce.data, 'action')
+
         dispatch({ type: 'ADD_ITEM_TO_CART', payload: responce.data })
     }
 };

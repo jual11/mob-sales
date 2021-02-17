@@ -15,7 +15,7 @@ class App extends React.Component {
   render() {
     return (
             <Router history={history}>
-                <React.Fragment>
+                <div className='body'>
                     <Header/>
                     <Switch>
                         <Route exact path={'/'} component={MainPage} />
@@ -25,8 +25,8 @@ class App extends React.Component {
                         <Route exact path={'/myorders'} component={Orders}/>
                         <Route exact path={'/signin'} component={SignIn}/>
                     </Switch>
-                    <Footer />
-                </React.Fragment>
+                </div>
+                <Footer />
             </Router>
     );
   }

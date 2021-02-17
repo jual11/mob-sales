@@ -7,20 +7,19 @@ export default (state = {}, action) => {
         case 'INCREASE_ITEM_IN_CART':
             return state.map(product => {
                 if (product.id === action.payload.id) {
-                    return { ...product, count: product.count};
+                    return { ...product, count: action.payload.count};
                 }
                 return product;
             });
         case 'DECREASE_ITEM_IN_CART':
             return state.map(product => {
                 if (product.id === action.payload.id) {
-                    return { ...product, count: product.count};
+                    return { ...product, count: action.payload.count};
                 }
                 return product;
             });
         case "FETCH_ITEM_IN_CART":
             return (action.payload);
-            
         case "REMOVE_ITEM_FROM_CART":
             return _.omit(state, action.payload);
         default:

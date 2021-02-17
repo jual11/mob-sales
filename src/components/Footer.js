@@ -3,9 +3,9 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='footer'>
+        <footer className='footer'>
             Copyright 2021
-        </div>
+        </footer>
     )
 }
 
